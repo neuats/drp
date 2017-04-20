@@ -1,0 +1,945 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>README</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-data-resources-portal-drp-documentation" class="anchor" href="#data-resources-portal-drp-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Resources Portal (DRP) Documentation</h1>
+<h3>
+<a id="user-content-website-url-httpswwwnortheasternedudataresources" class="anchor" href="#website-url-httpswwwnortheasternedudataresources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Website URL: <a href="https://www.northeastern.edu/dataresources/">https://www.northeastern.edu/dataresources/</a>
+</h3>
+<h4>
+<a id="user-content-website-description" class="anchor" href="#website-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Website description</h4>
+<p>DRP is a Northeastern website that collects information about available software related to the data science ecosystem. It is primarly aimed at faculty and students conducting any data-driven project with little or no knowledge in the field. The main sections of the website are:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catalog</td>
+<td>Searchable and filterable catalog that aggregates all the known data science software offered by NEU.</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td>Contains information about Authors, tutorials, faculty and other experts that can help faculty and students learn more about data science or provide guidance on specific projects.</td>
+</tr>
+<tr>
+<td>Learn</td>
+<td>
+<strong>Future goal</strong> This section will contain curated information to get started on a series of data science topics.</td>
+</tr>
+<tr>
+<td>Community</td>
+<td>
+<strong>Future goal</strong> THis section will contain a forum where students and faculty can collaborate, post projects, questions or ideas.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h4>
+<a id="user-content-1-basic-how-tos" class="anchor" href="#1-basic-how-tos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Basic How-Tos</h4>
+<h5>
+<a id="user-content-11-adding-new-tools" class="anchor" href="#11-adding-new-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.1 Adding new tools:</h5>
+<p>To add a new tool simply create a new post. <g-emoji alias="fire" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png" ios-version="6.0">🔥</g-emoji> Make sure to set the category to <strong>"tool"</strong>. If you don't do this the new tool will not show up in the catalog</p>
+<p><g-emoji alias="fire" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png" ios-version="6.0">🔥</g-emoji> Make sure you fill out all the fields. First fill in the main fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>The name of the tool (e.g. Wolfram Mathematica)</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>The short text that will appear in the catalog view at <code>dataresources/catalog</code>
+</td>
+</tr>
+<tr>
+<td>Tool link</td>
+<td>The link to where the tool can be downloaded at Northeastern or a provider's website</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td>A list of additional resources. <g-emoji alias="fire" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png" ios-version="6.0">🔥</g-emoji> Add each resource as one line of plain text, then use the hyperlink button. Make sure to select "open link in a new tab" under the options (cog wheel) icon</td>
+</tr>
+<tr>
+<td>Post body</td>
+<td>The longer description of the tool that will be read on the tool's page, for example at <code>dataresources/mathematica</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Then on the right panel, you'll find these fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categories</td>
+<td>
+<g-emoji alias="fire" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png" ios-version="6.0">🔥</g-emoji> Make sure to set the category to "tool". If you don't do this the new tool will not show up in the catalog</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Add tags separated by comma (e.g. <code>tag1,tag2</code>) or select from the options while you type. Avoid the duplication of tags (i.e. if 'stats' already exists, use it instead of adding 'statistics')</td>
+</tr>
+<tr>
+<td>Functions</td>
+<td>Check as many as apply. These are the main functions of a tool</td>
+</tr>
+<tr>
+<td>Licences</td>
+<td>Check as many as apply</td>
+</tr>
+<tr>
+<td>Coding skills required</td>
+<td>Check only one</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Check as many as apply</td>
+</tr>
+<tr>
+<td>Platform</td>
+<td>Check as many as apply</td>
+</tr>
+<tr>
+<td>Featured image</td>
+<td>Add an image of at least 200x200px. It's better if the image is cropped in a square proportion</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h5>
+<a id="user-content-12-adding-new-resources" class="anchor" href="#12-adding-new-resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.2 Adding new resources:</h5>
+<p>To add a new resource simply create a new post. <g-emoji alias="fire" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png" ios-version="6.0">🔥</g-emoji> Make sure to set the category to <strong>"resource"</strong>. If you don't do this the new tool will not show up in the catalog</p>
+<p><g-emoji alias="fire" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f525.png" ios-version="6.0">🔥</g-emoji> Make sure you fill out all the fields. First fill in the main fields:</p>
+<br>
+<h4>
+<a id="user-content-2-implementation--plugins" class="anchor" href="#2-implementation--plugins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Implementation &amp; plugins</h4>
+<h5>
+<a id="user-content-21-wordpress-and-the-main-theme" class="anchor" href="#21-wordpress-and-the-main-theme" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.1 Wordpress and the main theme:</h5>
+<p>A custom theme was developed based on the <a href="http://advance.imonthemes.com/">Advance WP Theme</a>. This theme was found to be very well suited for the proposed layout of the website. To prevent additional updates of the theme that could delete any customization, a clone of this theme was created, called <em>AdvanceCustom</em>, which is where all the custom files are located.</p>
+<h5>
+<a id="user-content-22-page-build-up" class="anchor" href="#22-page-build-up" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.2 Page build up:</h5>
+<p>The plugin <a href="https://vc.wpbakery.com/">visual composer</a> is used to build a lot of the simpler components of the website, some pages however, like the homepage or the catalog page required more custom code. In particular, the tool view (i.e. the page that displays information about a given tool) had to be custom created using PHP, in order to accomodate all the custom data and more complex layout. This file can be found in <code>./content-single.php</code>.</p>
+<h5>
+<a id="user-content-23-custom-fields-plugin" class="anchor" href="#23-custom-fields-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.3 Custom Fields plugin:</h5>
+<p>Custom fields allow the creation of data fields that can contain almost any type of data. They're used in DRP to add all sorts of custom content to the post, so that a given tool can have extra attributes e.g. "summary or link to the tool". This in turn allows these fields to be filterable and searchable.</p>
+<p><a href="https://srd.wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> was installed in order to make the creation of custom fields easier and code-free. To manage the custom fields go to <code>Custom Fields</code> on the Dashboard sidebar. Additionally, a plugin called <a href="https://srd.wordpress.org/plugins/acf-vc-integrator/">ACF-VC</a> is used so that these fields are accessible by Visual Composer, and to build page elements with them. See diagram.</p>
+<p><a href="/Users/solanoroman.j/Documents/ATS/data%20science%20tool/documentation/dataResources.png" target="_blank"><img src="/Users/solanoroman.j/Documents/ATS/data%20science%20tool/documentation/dataResources.png" alt="Image of Breadcrumb" height="400" style="max-width:100%;"></a></p>
+<h5>
+<a id="user-content-24-search-and-filter-pro" class="anchor" href="#24-search-and-filter-pro" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.4 Search and Filter Pro:</h5>
+<p><a href="https://www.designsandcode.com/wordpress-plugins/search-filter-pro/">The Search and Filter Pro plugin</a> enables the functionality of the catalog. This filter searches taxonomies and text inside each post, and can be fully customized to include only certain taxonomies if desired.</p>
+<h5>
+<a id="user-content-25-scripts-n-styles-plugin" class="anchor" href="#25-scripts-n-styles-plugin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.5 Scripts n Styles Plugin:</h5>
+<p><a href="https://wordpress.org/plugins/scripts-n-styles/">The Scripts n Styles plugin</a> allows to inject custom Javascript and other libraries into a specific page. This is used in two pages: Homepage (3.1) and Catalog (3.2).</p>
+<h5>
+<a id="user-content-26-related-posts" class="anchor" href="#26-related-posts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.6 Related posts:</h5>
+<p>The <a href="https://rup.wordpress.org/plugins/yuzo-related-post/">Yuzo Related Posts Plugin</a> function is self explanatory. It allows the creation of a "related posts" section in every tool page. This is currently set to find related posts based on <strong>tags</strong>. There is also <strong>custom</strong> css applied within the tool settings.</p>
+<h5>
+<a id="user-content-27-taxonomies" class="anchor" href="#27-taxonomies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2.7 Taxonomies:</h5>
+<p>There's two plugins that allow to manage taxonomies. <a href="http://matswestholm.se/en/wordpress-plugin/mw-taxonomy/">MW Taxonomy</a> allows to create new taxonomies without code. To access this plugin, go to <code>Taxonomy</code> on the left panel of the dashboard.</p>
+<p>Additionally, <a href="https://rup.wordpress.org/plugins/custom-taxonomy-order-ne/">Custom Taxonomy Order NE</a> allows to change the order of the taxonomies for a better hierarchical organization. To access the setting of the pluging, go to <code>Term Order</code> on the left panel of the dashboard.</p>
+<br>
+<h4>
+<a id="user-content-3-pages-specs" class="anchor" href="#3-pages-specs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Pages specs</h4>
+<h6>
+<a id="user-content-31-the-homepage" class="anchor" href="#31-the-homepage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.1 The homepage:</h6>
+<p>The homepage was build with a custom php template, a custom "hero image" with a particle system and visual composer for the rest of the contents.</p>
+<ul>
+<li>
+<p>3.1.1 Custom php template: A simplification of the <code>page.php</code> template that removes the grey header. The file is <code>page-home.php</code>. This file shouldn't usually be modified.</p>
+</li>
+<li>
+<p>3.1.2 Hero image: To acomplish the layout of the "hero image", the library <a href="http://vincentgarreau.com/particles.js/">particle.js</a> was implemented. The particle.js library works using two files: the library file <code>particle.js</code> and the configuration file <code>grab-particles-config.json</code>. The <code>particle.js</code> file can be found at: <code>https://www.northeastern.edu/dataresources/wp-content/themes/advanceCustom/js/particles.js</code>. This file is read in using the Script n Styles plugin in the homepage, using the following code:</p>
+</li>
+</ul>
+<pre><code>document.addEventListener('DOMContentLoaded', function() {
+  particlesJS.load('particles-js', 'https://www.northeastern.edu/dataresources/wp-content/themes/advanceCustom/js/grab-particles-config.json', function() {
+  console.log('callback - particles.js config loaded');
+  });
+}, false);
+</code></pre>
+<p>Note the location of the config file.</p>
+<p>Additionally, you can find a <strong>Raw HTML</strong> VC element that contains a <code>div</code> with <code>id = "particles-js"</code>. This element is where the particles are drawn.</p>
+<ul>
+<li>3.1.3 Custom CSS: Found under the page CSS within the visual composer editing view (cog icon on top right corner). The custom css uses <strong>Flexbox</strong> to neatly arrange the elements. Some additional was added for the appearance of the two main buttons.</li>
+</ul>
+<h6>
+<a id="user-content-32-the-catalog-page" class="anchor" href="#32-the-catalog-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3.2 The Catalog page:</h6>
+<ul>
+<li>
+<p>3.2.1 There's two filters created using the Search &amp; Filter plugin. One filter is for desktop view (<code>searchandfilter[data-sf-form-id="296"]</code>) and the other one is for mobile view (<code>.searchandfilter[data-sf-form-id="437"]</code>). Specific CSS was added to customize the look and feel of these filters. (See section <strong>3</strong>)</p>
+</li>
+<li>
+<p>3.2.2 The grid is populated with posts with all posts that have the <code>Category = Tool</code>.</p>
+</li>
+<li>
+<p>3.2.3 The overal layout is constructed using visual composer, using a custom grid called <strong>Custom Catalog page</strong>. However, there's a <strong>Raw HTML</strong> VC component that injects a "breadcrumb" element to indicate to the user that he's currently filtering tools. This HTML is injected via a script included in the Catalog Page using the Scripts n Styles plugin.</p>
+</li>
+</ul>
+<p><a href="/Users/solanoroman.j/Documents/ATS/data%20science%20tool/documentation/breadcrumb.png" target="_blank"><img src="/Users/solanoroman.j/Documents/ATS/data%20science%20tool/documentation/breadcrumb.png" alt="Image of Breadcrumb" height="250" style="max-width:100%;"></a></p>
+<br>
+<h5>
+<a id="user-content-4-custom-css" class="anchor" href="#4-custom-css" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Custom CSS:</h5>
+<p>Custom CSS was required for the look and feel and the responsiveness of the website. There are several locations with custom CSS:</p>
+<ul>
+<li>General custom CSS: found in <code>styles.css</code>
+</li>
+<li>Plugin-specific custom CSS: found inside the menu of Visual Composer and Related Posts</li>
+<li>Page-specific custom CSS: found in some specific pages under the cog wheel in visual composer edit mode (see <strong>section 3</strong>).</li>
+</ul>
+<br>
+<h5>
+<a id="user-content-4-styles-guide" class="anchor" href="#4-styles-guide" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Styles guide:</h5>
+<h6>
+<a id="user-content-41-colors" class="anchor" href="#41-colors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.1 Colors:</h6>
+<p>The main colors are:</p>
+<ul>
+<li>DRP Orange: <a href="http://www.colorhexa.com/f14e49">#F14E49</a>
+</li>
+<li>DRP Purple: <a href="http://www.colorhexa.com/3a2b4a">#3A2B4A</a>
+</li>
+<li>Main grey: <a href="http://www.colorhexa.com/555555">#555555</a>
+</li>
+<li>Light grey: <a href="http://www.colorhexa.com/95989a">#95989A</a>
+</li>
+<li>Text: <a href="http://www.colorhexa.com/555555">#555555</a>
+</li>
+</ul>
+<h6>
+<a id="user-content-42-fonts" class="anchor" href="#42-fonts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.2 Fonts:</h6>
+<p>The website uses <a href="https://fonts.google.com/specimen/Roboto">Roboto</a>. Specifically the 400 (regular) and 300 (light) weights.</p>
+</article></body></html>
